@@ -57,7 +57,7 @@ dependencies {
 
     //room
     implementation "androidx.room:room-runtime:2.4.3"
-    kapt "androidx.room:room-compiler:2.4.2"
+    kapt "androidx.room:room-compiler:2.4.3"
 
     //retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
@@ -65,15 +65,19 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:4.9.0"
 
     //coroutine support
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1" //viewModelScope
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.4.1" //liveData
-    implementation "androidx.room:room-ktx:2.4.2"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1" //viewModelScope
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1" //liveData
+    implementation "androidx.room:room-ktx:2.4.3"
 
     //mockito
-    testImplementation 'org.mockito:mockito-core:3.12.4'
+    testImplementation 'org.mockito:mockito-core:4.0.0'
     testImplementation 'org.mockito:mockito-inline:3.12.4'
     testImplementation "androidx.arch.core:core-testing:2.1.0" // InstantTaskExecutorRule
 
     //spesial testing
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1" //TestDispatcher
+
+    //special instrumentation testing
+    androidTestImplementation "androidx.arch.core:core-testing:2.1.0" // InstantTaskExecutorRule
+    androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1" //TestDispatcher
 }
